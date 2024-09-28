@@ -3,9 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carbon Calculator</title>
 </head>
 <body>
-    <h1>Carbon Calculator</h1>
+    <!--Title-->
+    <h1>Carbon Calculator</h1>  
+    
+    <!--Sector 1-->
+    <p style="font-size: larger;">Energy Production Sector - 36% GCE</p>
+
+    <!--slider 1 title-->
+    <p style="font-size: medium;">Coal (% GCE)</p>
+    <!--create slider 1-->
+    <input type="range" step="0.1" min="0" max="15" id="coalPercentage" name="percentage" value="15">
+    <!--display slider value-->
+    <span id="sliderValue1" style="position: relative; bottom: 3px;">15</span>
+
+    <!--slider 2 title-->
+    <p style="font-size: medium;">Natural Gas (% GCE)</p>
+    <!--create slider 2-->
+    <input type="range" step="0.1" min="0" max="10" id="naturalGasPercentage" name="percentage" value="10">
+    <!--display slider value-->
+    <span id="sliderValue2" style="position: relative; bottom: 3px;">10</span>
+
+    <!--slider 3 title-->
+    <p style="font-size: medium;">Oil (% GCE)</p>
+    <!--create slider 3-->
+    <input type="range" step="0.1" min="0" max="11" id="oilPercentage" name="percentage" value="11">
+    <!--display slider value-->
+    <span id="sliderValue3" style="position: relative; bottom: 3px;">11</span>
+    <script>
+        const slider1 = document.getElementById("coalPercentage");
+        const slider2 = document.getElementById("naturalGasPercentage");
+        const slider3 = document.getElementById("oilPercentage");
+        const output1 = document.getElementById("sliderValue1");
+        const output2 = document.getElementById("sliderValue2");
+        const output3 = document.getElementById("sliderValue3");
+
+
+        slider1.oninput = function() {
+            output1.textContent = this.value;
+        }
+        slider2.oninput = function() {
+            output2.textContent = this.value;
+        }
+        slider3.oninput = function() {
+            output3.textContent = this.value;
+        }
+    </script>
+
+    <!--Sector 2-->
+    <p style="font-size: larger;">Transportation - 21% GCE</p>
+
+    <!--slider 4 title-->
+    <p style="font-size: medium;">Road Transport (% GCE)</p>
+    <!--create slider 4-->
+    <input type="range" step="0.1" min="0" max="14" id="roadTransportPercentage" name="percentage" value="14">
+    <!--display slider value-->
+    <span id="sliderValue4" style="position: relative; bottom: 3px;">14</span>
+
+    <!--slider 5 title-->
+    <p style="font-size: medium;">Aviation (% GCE)</p>
+    <!--create slider 5-->
+    <input type="range" step="0.01" min="0" max="3" id="aviationPercentage" name="percentage" value="3">
+    <!--display slider value-->
+    <span id="sliderValue5" style="position: relative; bottom: 3px;">3</span>
+
+    <!--slider 6 title-->
+    <p style="font-size: medium;">Shipping (% GCE)</p>
+    <!--create slider 6-->
+    <input type="range" step="0.01" min="0" max="2.5" id="shippingPercentage" name="percentage" value="2.5">
+    <!--display slider value-->
+    <span id="sliderValue6" style="position: relative; bottom: 3px;">2.5</span>
+
+    <!--slider 7 title-->
+    <p style="font-size: medium;">Rail Transport (% GCE)</p>
+    <!--create slider 7-->
+    <input type="range" step="0.01" min="0" max="0.5" id="railTransportPercentage" name="percentage" value="0.5">
+    <!--display slider value-->
+    <span id="sliderValue7" style="position: relative; bottom: 3px;">0.5</span>
+
+    <script>
+        const slider4 = document.getElementById("roadTransportPercentage");
+        const slider5 = document.getElementById("aviationPercentage");
+        const slider6 = document.getElementById("shippingPercentage");
+        const slider7 = document.getElementById("railTransportPercentage");
+        const output4 = document.getElementById("sliderValue4");
+        const output5 = document.getElementById("sliderValue5");
+        const output6 = document.getElementById("sliderValue6");
+        const output7 = document.getElementById("sliderValue7");
+
+
+        slider4.oninput = function() {
+            output4.textContent = this.value;
+        }
+        slider5.oninput = function() {
+            output5.textContent = this.value;
+        }
+        slider6.oninput = function() {
+            output6.textContent = this.value;
+        }
+        slider7.oninput = function() {
+            output7.textContent = this.value;
+        }
+    </script>
+
+    <!--Sector 3-->
+    <p style="font-size: larger;">Industry - 20% GCE</p>
+
+    <!--slider 8 title-->
+    <p style="font-size: medium;">Cement Production (% GCE)</p>
+    <!--create slider 8-->
+    <input type="range" step="0.1" min="0" max="6" id="cementProductionPercentage" name="percentage" value="6">
+    <!--display slider value-->
+    <span id="sliderValue8" style="position: relative; bottom: 3px;">6</span>
+
+    <!--slider 9 title-->
+    <p style="font-size: medium;">Steel and Iron Production (% GCE)</p>
+    <!--create slider 9-->
+    <input type="range" step="0.01" min="0" max="5" id="steelAndIronProductionPercentage" name="percentage" value="5">
+    <!--display slider value-->
+    <span id="sliderValue9" style="position: relative; bottom: 3px;">5</span>
+
+    <!--slider 10 title-->
+    <p style="font-size: medium;">Misc. Manufacturing (% GCE)</p>
+    <!--create slider 10-->
+    <input type="range" step="0.01" min="0" max="4" id="miscManufacturingPercentage" name="percentage" value="4">
+    <!--display slider value-->
+    <span id="sliderValue10" style="position: relative; bottom: 3px;">4</span>
+
+    <!--slider 11 title-->
+    <p style="font-size: medium;">Chemicals Production (% GCE)</p>
+    <!--create slider 11-->
+    <input type="range" step="0.01" min="0" max="5" id="chemicalsProductionPercentage" name="percentage" value="5">
+    <!--display slider value-->
+    <span id="sliderValue11" style="position: relative; bottom: 3px;">5</span>
+
+    <script>
+    const slider8 = document.getElementById("cementProductionPercentage");
+    const slider9 = document.getElementById("steelAndIronProductionPercentage");
+    const slider10 = document.getElementById("miscManufacturingPercentage");
+    const slider11 = document.getElementById("chemicalsProductionPercentage");
+    const output8 = document.getElementById("sliderValue8");
+    const output9 = document.getElementById("sliderValue9");
+    const output10 = document.getElementById("sliderValue10");
+    const output11 = document.getElementById("sliderValue11");
+
+
+    slider8.oninput = function() {
+        output8.textContent = this.value;
+    }
+    slider9.oninput = function() {
+        output9.textContent = this.value;
+    }
+    slider10.oninput = function() {
+        output10.textContent = this.value;
+    }
+    slider11.oninput = function() {
+        output11.textContent = this.value;
+    }
+    </script>
+
+    <!--Sector 4-->
+    <p style="font-size: larger;">Agriculture, Forestry, and Other Land Use - 18% GCE</p>
+
+    <!--slider 12 title-->
+    <p style="font-size: medium;">Deforestation and Land Repurposing (% GCE)</p>
+    <!--create slider 12-->
+    <input type="range" step="0.1" min="0" max="8" id="deforestationAndLandRepurposingPercentage" name="percentage" value="8">
+    <!--display slider value-->
+    <span id="sliderValue12" style="position: relative; bottom: 3px;">8</span>
+
+    <!--slider 13 title-->
+    <p style="font-size: medium;">Agricultural Practices (% GCE)</p>
+    <!--create slider 13-->
+    <input type="range" step="0.1" min="0" max="10" id="agriculturalPracticesPercentage" name="percentage" value="10">
+    <!--display slider value-->
+    <span id="sliderValue13" style="position: relative; bottom: 3px;">10</span>
+    <script>
+        const slider12 = document.getElementById("deforestationAndLandRepurposingPercentage");
+        const slider13 = document.getElementById("agriculturalPracticesPercentage");
+        const output12 = document.getElementById("sliderValue12");
+        const output13 = document.getElementById("sliderValue13");
+
+
+        slider12.oninput = function() {
+            output12.textContent = this.value;
+        }
+        slider13.oninput = function() {
+            output13.textContent = this.value;
+        }
+    </script>
+
+    <!--Sector 5-->
+    <p style="font-size: larger;">Fossil Fuel Acquisition and Processing - 3% GCE</p>
+
+    <!--create slider 14-->
+    <input type="range" step="0.01" min="0" max="3" id="fossilFuelAcquisitionAndProcessingPercentage" name="percentage" value="3">
+    <!--display slider value-->
+    <span id="sliderValue14" style="position: relative; bottom: 3px;">3</span>
+    <script>
+        const slider14 = document.getElementById("fossilFuelAcquisitionAndProcessingPercentage");
+        const output14 = document.getElementById("sliderValue14");
+
+
+        slider14.oninput = function() {
+            output14.textContent = this.value;
+        }
+    </script>
+
+    <!--Sector 6-->
+    <p style="font-size: larger;">Buildings - 2% GCE</p>
+
+    <!--create slider 15-->
+    <input type="range" step="0.01" min="0" max="2" id="buildingsPercentage" name="percentage" value="2">
+    <!--display slider value-->
+    <span id="sliderValue15" style="position: relative; bottom: 3px;">2</span>
+    <script>
+        const slider15 = document.getElementById("buildingsPercentage");
+        const output15 = document.getElementById("sliderValue15");
+
+
+        slider15.oninput = function() {
+            output15.textContent = this.value;
+        }
+    </script>
+
+    <!--Sector 7-->
+    <p style="font-size: larger;">Waste - 1% GCE</p>
+
+    <!--create slider 16-->
+    <input type="range" step="0.01" min="0" max="1" id="wastePercentage" name="percentage" value="1">
+    <!--display slider value-->
+    <span id="sliderValue16" style="position: relative; bottom: 3px;">1</span>
+    <script>
+        const slider16 = document.getElementById("wastePercentage");
+        const output16 = document.getElementById("sliderValue16");
+
+
+        slider16.oninput = function() {
+            output16.textContent = this.value;
+        }
+    </script>
+    
+    <!-- Find Sum -->
+    <p id="gceText">Error Text</p>
+    <p id="currentGceText">Error Text</p>
+    <p id="gceRateText">Error Text</p>
+
+    <script>
+        // Function to calculate the total GCE
+        function calculateGCE() {
+            // Retrieve and parse slider values
+            let coalPercentaged = parseFloat(coalPercentage.value);
+            let naturalGasPercentaged = parseFloat(naturalGasPercentage.value);
+            let oilPercentaged = parseFloat(oilPercentage.value);
+            let roadTransportPercentaged = parseFloat(roadTransportPercentage.value);
+            let aviationPercentaged = parseFloat(aviationPercentage.value);
+            let shippingPercentaged = parseFloat(shippingPercentage.value);
+            let railTransportPercentaged = parseFloat(railTransportPercentage.value);
+            let cementProductionPercentaged = parseFloat(cementProductionPercentage.value);
+            let steelAndIronProductionPercentaged = parseFloat(steelAndIronProductionPercentage.value);
+            let miscManufacturingPercentaged = parseFloat(miscManufacturingPercentage.value);
+            let chemicalsProductionPercentaged = parseFloat(chemicalsProductionPercentage.value);
+            let deforestationAndLandRepurposingPercentaged = parseFloat(deforestationAndLandRepurposingPercentage.value);
+            let agriculturalPracticesPercentaged = parseFloat(agriculturalPracticesPercentage.value);
+            let fossilFuelAcquisitionAndProcessingPercentaged = parseFloat(fossilFuelAcquisitionAndProcessingPercentage.value);
+            let buildingsPercentaged = parseFloat(buildingsPercentage.value);
+            let wastePercentaged = parseFloat(wastePercentage.value);
+
+            // Sum the values
+            let gce = coalPercentaged + naturalGasPercentaged + oilPercentaged + roadTransportPercentaged + aviationPercentaged + 
+                    shippingPercentaged + railTransportPercentaged + cementProductionPercentaged + steelAndIronProductionPercentaged + 
+                    chemicalsProductionPercentaged + miscManufacturingPercentaged + deforestationAndLandRepurposingPercentaged + 
+                    agriculturalPracticesPercentaged + fossilFuelAcquisitionAndProcessingPercentaged + buildingsPercentaged + wastePercentaged;
+            
+            // Display the total GCE sum in the HTML element
+            const gceDisplay = document.getElementById("gceText");
+            gceDisplay.innerText = gce + "% of current global emissions";
+
+            // Calculate and display the current GCE divided by 2.7027027027027026
+            let currentGCE = gce / 2.7027027027027026;
+            const currentGceDisplay = document.getElementById("currentGceText");
+            currentGceDisplay.innerText = currentGCE + " Gt/year";
+
+            let gceRate = 100 - gce
+            const gceRateDisplay = document.getElementById("gceRateText");
+            gceRateDisplay.innerText = "The rate of global carbon emissions has been reduced by " + gceRate + "%.";
+        }
+
+        // Add event listeners to all the sliders
+        document.getElementById("coalPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("naturalGasPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("oilPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("roadTransportPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("aviationPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("shippingPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("railTransportPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("cementProductionPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("steelAndIronProductionPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("miscManufacturingPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("chemicalsProductionPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("deforestationAndLandRepurposingPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("agriculturalPracticesPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("fossilFuelAcquisitionAndProcessingPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("buildingsPercentage").addEventListener("input", calculateGCE);
+        document.getElementById("wastePercentage").addEventListener("input", calculateGCE);
+
+        // Perform the initial calculation to set the correct value on page load
+        calculateGCE();
+    </script>
+
+
 </body>
 </html>
