@@ -112,7 +112,7 @@
     <p style="font-size: larger;">Industry - 20% GCE</p>
 
     <!--slider 8 title-->
-    <p style="font-size: medium;">Cement Production (% GCE)</p>
+    <a href="cementproduction.html"><p style="font-size: medium;">Cement Production (% GCE)</p></a>
     <!--create slider 8-->
     <input type="range" step="0.1" min="0" max="6" id="cementProductionPercentage" name="percentage" value="6">
     <!--display slider value-->
@@ -285,7 +285,7 @@
             // Calculate and display the current GCE divided by 2.7027027027027026
             let currentGCE = gce / 2.7027027027027026;
             const currentGceDisplay = document.getElementById("currentGceText");
-            currentGceDisplay.innerText = currentGCE + " Gt/year";
+            currentGceDisplay.innerText = "Global carbon emissions have been reduced to " + currentGCE + " Gt CO₂/year";
 
             let gceRate = 100 - gce
             const gceRateDisplay = document.getElementById("gceRateText");
